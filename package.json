@@ -53,7 +53,8 @@
     "@stdlib/math-base-special-sqrt": "^0.0.x",
     "@stdlib/math-base-special-tanh": "^0.0.x",
     "@stdlib/utils-define-nonenumerable-read-only-property": "^0.0.x",
-    "debug": "^2.6.9"
+    "debug": "^2.6.9",
+    "@stdlib/error-tools-fmtprodmsg": "^0.0.x"
   },
   "devDependencies": {
     "@stdlib/array-base-linspace": "^0.0.x",
