@@ -45,13 +45,13 @@ where the parameter `m` is related to the modulus `k` by `m = k^2`.
 ## Usage
 
 ```javascript
-import ellipj from 'https://cdn.jsdelivr.net/gh/stdlib-js/math-base-special-ellipj@deno/mod.js';
+import ellipj from 'https://cdn.jsdelivr.net/gh/stdlib-js/math-base-special-ellipj@v0.0.1-deno/mod.js';
 ```
 
 You can also import the following named exports from the package:
 
 ```javascript
-import { am, assign, cn, dn, sn } from 'https://cdn.jsdelivr.net/gh/stdlib-js/math-base-special-ellipj@deno/mod.js';
+import { am, assign, cn, dn, sn } from 'https://cdn.jsdelivr.net/gh/stdlib-js/math-base-special-ellipj@v0.0.1-deno/mod.js';
 ```
 
 #### ellipj( u, m )
@@ -156,7 +156,7 @@ Although `sn`, `cn`, and `dn` may be computed for `-∞ < m < ∞`, the domain o
 ```javascript
 import linspace from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-base-linspace@deno/mod.js';
 import ellipk from 'https://cdn.jsdelivr.net/gh/stdlib-js/math-base-special-ellipk@deno/mod.js';
-import ellipj from 'https://cdn.jsdelivr.net/gh/stdlib-js/math-base-special-ellipj@deno/mod.js';
+import ellipj from 'https://cdn.jsdelivr.net/gh/stdlib-js/math-base-special-ellipj@v0.0.1-deno/mod.js';
 
 var m = 0.7;
 var u = linspace( 0.0, ellipk( m ), 100 );
