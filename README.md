@@ -56,13 +56,18 @@ where the parameter `m` is related to the modulus `k` by `m = k^2`.
 ## Usage
 
 ```javascript
+import ellipj from 'https://cdn.jsdelivr.net/gh/stdlib-js/math-base-special-ellipj@deno/mod.js';
+```
+The previous example will load the latest bundled code from the deno branch. Alternatively, you may load a specific version by loading the file from one of the [tagged bundles](https://github.com/stdlib-js/math-base-special-ellipj/tags). For example,
+
+```javascript
 import ellipj from 'https://cdn.jsdelivr.net/gh/stdlib-js/math-base-special-ellipj@v0.2.0-deno/mod.js';
 ```
 
 You can also import the following named exports from the package:
 
 ```javascript
-import { am, assign, cn, dn, sn } from 'https://cdn.jsdelivr.net/gh/stdlib-js/math-base-special-ellipj@v0.2.0-deno/mod.js';
+import { am, assign, cn, dn, sn } from 'https://cdn.jsdelivr.net/gh/stdlib-js/math-base-special-ellipj@deno/mod.js';
 ```
 
 #### ellipj( u, m )
@@ -167,7 +172,7 @@ Although `sn`, `cn`, and `dn` may be computed for `-∞ < m < ∞`, the domain o
 ```javascript
 import linspace from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-base-linspace@deno/mod.js';
 import ellipk from 'https://cdn.jsdelivr.net/gh/stdlib-js/math-base-special-ellipk@deno/mod.js';
-import ellipj from 'https://cdn.jsdelivr.net/gh/stdlib-js/math-base-special-ellipj@v0.2.0-deno/mod.js';
+import ellipj from 'https://cdn.jsdelivr.net/gh/stdlib-js/math-base-special-ellipj@deno/mod.js';
 
 var m = 0.7;
 var u = linspace( 0.0, ellipk( m ), 100 );
