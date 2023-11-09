@@ -60,7 +60,7 @@
     "@stdlib/assert-has-own-property": "^0.1.1",
     "@stdlib/assert-is-array": "^0.1.1",
     "@stdlib/assert-is-number": "^0.1.1",
-    "@stdlib/bench": "^0.1.0",
+    "@stdlib/bench": "^0.2.0",
     "@stdlib/constants-float64-half-pi": "^0.1.1",
     "@stdlib/constants-float64-ninf": "^0.1.1",
     "@stdlib/constants-float64-pinf": "^0.1.1",

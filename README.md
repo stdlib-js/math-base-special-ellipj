@@ -214,14 +214,6 @@ for ( i = 0; i < 100; i++ ) {
 
 <section class="related">
 
-* * *
-
-## See Also
-
--   <span class="package-name">[`@stdlib/math-base/special/ellipj`][@stdlib/math/base/special/ellipj]</span><span class="delimiter">: </span><span class="description">compute the complete elliptic integral of the second kind.</span>
-
-</section>
-
 <!-- /.related -->
 
 <!-- Section for all links. Make sure to keep an empty line after the `section` element and another before the `/section` close. -->
@@ -302,8 +294,6 @@ Copyright &copy; 2016-2023. The Stdlib [Authors][stdlib-authors].
 [@fukushima:2015a]: https://doi.org/10.1016/j.cam.2014.12.038
 
 <!-- <related-links> -->
-
-[@stdlib/math/base/special/ellipj]: https://github.com/stdlib-js/math-base-special-ellipj
 
 <!-- </related-links> -->
 
