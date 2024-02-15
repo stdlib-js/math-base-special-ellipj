@@ -58,6 +58,11 @@ where the parameter `m` is related to the modulus `k` by `m = k^2`.
 To use in Observable,
 
 ```javascript
+ellipj = require( 'https://cdn.jsdelivr.net/gh/stdlib-js/math-base-special-ellipj@umd/browser.js' )
+```
+The previous example will load the latest bundled code from the umd branch. Alternatively, you may load a specific version by loading the file from one of the [tagged bundles](https://github.com/stdlib-js/math-base-special-ellipj/tags). For example,
+
+```javascript
 ellipj = require( 'https://cdn.jsdelivr.net/gh/stdlib-js/math-base-special-ellipj@v0.3.0-umd/browser.js' )
 ```
 
@@ -70,7 +75,7 @@ var ellipj = require( 'path/to/vendor/umd/math-base-special-ellipj/index.js' )
 To include the bundle in a webpage,
 
 ```html
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/math-base-special-ellipj@v0.3.0-umd/browser.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/math-base-special-ellipj@umd/browser.js"></script>
 ```
 
 If no recognized module system is present, access bundle contents via the global scope:
@@ -188,7 +193,7 @@ Although `sn`, `cn`, and `dn` may be computed for `-∞ < m < ∞`, the domain o
 <body>
 <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/array-base-linspace@umd/browser.js"></script>
 <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/math-base-special-ellipk@umd/browser.js"></script>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/math-base-special-ellipj@v0.3.0-umd/browser.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/math-base-special-ellipj@umd/browser.js"></script>
 <script type="text/javascript">
 (function () {
 
