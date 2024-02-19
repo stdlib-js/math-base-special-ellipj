@@ -216,6 +216,15 @@ for ( i = 0; i < 100; i++ ) {
 
 <section class="related">
 
+* * *
+
+## See Also
+
+-   <span class="package-name">[`@stdlib/math-base/special/ellipe`][@stdlib/math/base/special/ellipe]</span><span class="delimiter">: </span><span class="description">compute the complete elliptic integral of the second kind.</span>
+-   <span class="package-name">[`@stdlib/math-base/special/ellipk`][@stdlib/math/base/special/ellipk]</span><span class="delimiter">: </span><span class="description">compute the complete elliptic integral of the first kind.</span>
+
+</section>
+
 <!-- /.related -->
 
 <!-- Section for all links. Make sure to keep an empty line after the `section` element and another before the `/section` close. -->
@@ -257,8 +266,8 @@ Copyright &copy; 2016-2024. The Stdlib [Authors][stdlib-authors].
 [npm-image]: http://img.shields.io/npm/v/@stdlib/math-base-special-ellipj.svg
 [npm-url]: https://npmjs.org/package/@stdlib/math-base-special-ellipj
 
-[test-image]: https://github.com/stdlib-js/math-base-special-ellipj/actions/workflows/test.yml/badge.svg?branch=v0.3.0
-[test-url]: https://github.com/stdlib-js/math-base-special-ellipj/actions/workflows/test.yml?query=branch:v0.3.0
+[test-image]: https://github.com/stdlib-js/math-base-special-ellipj/actions/workflows/test.yml/badge.svg?branch=main
+[test-url]: https://github.com/stdlib-js/math-base-special-ellipj/actions/workflows/test.yml?query=branch:main
 
 [coverage-image]: https://img.shields.io/codecov/c/github/stdlib-js/math-base-special-ellipj/main.svg
 [coverage-url]: https://codecov.io/github/stdlib-js/math-base-special-ellipj?branch=main
@@ -299,6 +308,10 @@ Copyright &copy; 2016-2024. The Stdlib [Authors][stdlib-authors].
 [@fukushima:2015a]: https://doi.org/10.1016/j.cam.2014.12.038
 
 <!-- <related-links> -->
+
+[@stdlib/math/base/special/ellipe]: https://github.com/stdlib-js/math-base-special-ellipe
+
+[@stdlib/math/base/special/ellipk]: https://github.com/stdlib-js/math-base-special-ellipk
 
 <!-- </related-links> -->
 
