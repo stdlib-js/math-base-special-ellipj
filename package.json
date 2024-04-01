@@ -46,7 +46,7 @@
     "@stdlib/math-base-special-cos": "^0.2.1",
     "@stdlib/math-base-special-cosh": "^0.2.1",
     "@stdlib/math-base-special-ellipk": "^0.2.1",
-    "@stdlib/math-base-special-floor": "^0.2.1",
+    "@stdlib/math-base-special-floor": "^0.2.2",
     "@stdlib/math-base-special-sin": "^0.2.1",
     "@stdlib/math-base-special-sincos": "^0.2.1",
     "@stdlib/math-base-special-sinh": "^0.2.1",
