@@ -1,7 +1,7 @@
 /**
 * @license Apache-2.0
 *
-* Copyright (c) 2019 The Stdlib Authors.
+* Copyright (c) 2025 The Stdlib Authors.
 *
 * Licensed under the Apache License, Version 2.0 (the "License");
 * you may not use this file except in compliance with the License.
@@ -20,6 +20,7 @@
 
 // MODULES //
 
+var resolve = require( 'path' ).resolve;
 var tape = require( 'tape' );
 var isnan = require( '@stdlib/math-base-assert-is-nan' );
 var PINF = require( '@stdlib/constants-float64-pinf' );
@@ -27,7 +28,15 @@ var NINF = require( '@stdlib/constants-float64-ninf' );
 var HALF_PI = require( '@stdlib/constants-float64-half-pi' );
 var EPS = require( '@stdlib/constants-float64-eps' );
 var abs = require( '@stdlib/math-base-special-abs' );
-var ellipj = require( './../lib/main.js' );
+var tryRequire = require( '@stdlib/utils-try-require' );
+
+
+// VARIABLES //
+
+var ellipj = tryRequire( resolve( __dirname, './../lib/native.js' ) );
+var opts = {
+	'skip': ( ellipj instanceof Error )
+};
 
 
 // FIXTURES //
@@ -41,49 +50,49 @@ var unityModulus = require( './fixtures/cpp/unity_modulus.json' );
 
 // TESTS //
 
-tape( 'main export is a function', function test( t ) {
+tape( 'main export is a function', opts, function test( t ) {
 	t.ok( true, __filename );
 	t.strictEqual( typeof ellipj, 'function', 'main export is a function' );
 	t.end();
 });
 
-tape( 'the function returns the correct limits for `+infinity` with modulus `1.0`', function test( t ) {
+tape( 'the function returns the correct limits for `+infinity` with modulus `1.0`', opts, function test( t ) {
 	var v = ellipj( PINF, 1.0 );
-	t.strictEqual( v[ 0 ], 1.0, 'returns expected value for sn' );
-	t.strictEqual( v[ 1 ], 0.0, 'returns expected value for cn' );
-	t.strictEqual( v[ 2 ], 0.0, 'returns expected value for dn' );
-	t.strictEqual( v[ 3 ], HALF_PI, 'returns expected value for am' );
+	t.strictEqual( v[ 0 ], 1.0, 'returns expected value' );
+	t.strictEqual( v[ 1 ], 0.0, 'returns expected value' );
+	t.strictEqual( v[ 2 ], 0.0, 'returns expected value' );
+	t.strictEqual( v[ 3 ], HALF_PI, 'returns expected value' );
 	t.end();
 });
 
-tape( 'the function returns the correct limits for `-infinity` with modulus `1.0`', function test( t ) {
+tape( 'the function returns the correct limits for `-infinity` with modulus `1.0`', opts, function test( t ) {
 	var v = ellipj( NINF, 1.0 );
-	t.strictEqual( v[ 0 ], -1.0, 'returns expected value for sn' );
-	t.strictEqual( v[ 1 ], 0.0, 'returns expected value for cn' );
-	t.strictEqual( v[ 2 ], 0.0, 'returns expected value for dn' );
-	t.strictEqual( v[ 3 ], -HALF_PI, 'returns expected value for am' );
+	t.strictEqual( v[ 0 ], -1.0, 'returns expected value' );
+	t.strictEqual( v[ 1 ], 0.0, 'returns expected value' );
+	t.strictEqual( v[ 2 ], 0.0, 'returns expected value' );
+	t.strictEqual( v[ 3 ], -HALF_PI, 'returns expected value' );
 	t.end();
 });
 
-tape( 'the function returns the correct limits for `+infinity` with modulus `0.0`', function test( t ) {
+tape( 'the function returns the correct limits for `+infinity` with modulus `0.0`', opts, function test( t ) {
 	var v = ellipj( PINF, 0.0 );
-	t.strictEqual( isnan(v[ 0 ]), true, 'returns expected value for sn' );
-	t.strictEqual( isnan(v[ 1 ]), true, 'returns expected value for cn' );
-	t.strictEqual( v[ 2 ], 1.0, 'returns expected value for dn' );
-	t.strictEqual( v[ 3 ], PINF, 'returns expected value for am' );
+	t.strictEqual( isnan(v[ 0 ]), true, 'returns expected value' );
+	t.strictEqual( isnan(v[ 1 ]), true, 'returns expected value' );
+	t.strictEqual( v[ 2 ], 1.0, 'returns expected value' );
+	t.strictEqual( v[ 3 ], PINF, 'returns expected value' );
 	t.end();
 });
 
-tape( 'the function returns the correct limits for `-infinity` with modulus `0.0`', function test( t ) {
+tape( 'the function returns the correct limits for `-infinity` with modulus `0.0`', opts, function test( t ) {
 	var v = ellipj( NINF, 0.0 );
-	t.strictEqual( isnan(v[ 0 ]), true, 'returns expected value for sn' );
-	t.strictEqual( isnan(v[ 1 ]), true, 'returns expected value for cn' );
-	t.strictEqual( v[ 2 ], 1.0, 'returns expected value for dn' );
-	t.strictEqual( v[ 3 ], NINF, 'returns expected value for am' );
+	t.strictEqual( isnan(v[ 0 ]), true, 'returns expected value' );
+	t.strictEqual( isnan(v[ 1 ]), true, 'returns expected value' );
+	t.strictEqual( v[ 2 ], 1.0, 'returns expected value' );
+	t.strictEqual( v[ 3 ], NINF, 'returns expected value' );
 	t.end();
 });
 
-tape( 'the function evaluates the Jacobi elliptic functions sn, cn dn (medium positive modulus)', function test( t ) {
+tape( 'the function evaluates the Jacobi elliptic functions sn, cn dn (medium positive modulus)', opts, function test( t ) {
 	var snExpected;
 	var cnExpected;
 	var dnExpected;
@@ -135,7 +144,7 @@ tape( 'the function evaluates the Jacobi elliptic functions sn, cn dn (medium po
 	t.end();
 });
 
-tape( 'the function evaluates the Jacobi elliptic functions sn, cn dn (modulus near unity)', function test( t ) {
+tape( 'the function evaluates the Jacobi elliptic functions sn, cn dn (modulus near unity)', opts, function test( t ) {
 	var snExpected;
 	var cnExpected;
 	var dnExpected;
@@ -187,7 +196,7 @@ tape( 'the function evaluates the Jacobi elliptic functions sn, cn dn (modulus n
 	t.end();
 });
 
-tape( 'the function evaluates the Jacobi elliptic functions sn, cn dn (small positive modulus)', function test( t ) {
+tape( 'the function evaluates the Jacobi elliptic functions sn, cn dn (small positive modulus)', opts, function test( t ) {
 	var snExpected;
 	var cnExpected;
 	var dnExpected;
@@ -239,7 +248,7 @@ tape( 'the function evaluates the Jacobi elliptic functions sn, cn dn (small pos
 	t.end();
 });
 
-tape( 'the function evaluates the Jacobi elliptic functions sn, cn dn (zero modulus)', function test( t ) {
+tape( 'the function evaluates the Jacobi elliptic functions sn, cn dn (zero modulus)', opts, function test( t ) {
 	var snExpected;
 	var cnExpected;
 	var dnExpected;
@@ -286,7 +295,7 @@ tape( 'the function evaluates the Jacobi elliptic functions sn, cn dn (zero modu
 	t.end();
 });
 
-tape( 'the function evaluates the Jacobi elliptic functions sn, cn dn (unity modulus)', function test( t ) {
+tape( 'the function evaluates the Jacobi elliptic functions sn, cn dn (unity modulus)', opts, function test( t ) {
 	var snExpected;
 	var cnExpected;
 	var dnExpected;
