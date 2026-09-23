@@ -69,6 +69,7 @@
     "@stdlib/array-base-linspace": "^0.2.3",
     "@stdlib/array-float64": "^0.2.3",
     "@stdlib/assert-has-own-property": "^0.2.3",
+    "@stdlib/assert-is-almost-same-value": "^0.1.1",
     "@stdlib/assert-is-array": "^0.2.3",
     "@stdlib/assert-is-float64array": "^0.2.3",
     "@stdlib/assert-is-number": "^0.2.3",
