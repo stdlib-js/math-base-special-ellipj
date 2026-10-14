@@ -100,7 +100,21 @@
     "win32",
     "windows"
   ],
-  "keywords": [],
+  "keywords": [
+    "stdlib",
+    "stdmath",
+    "mathematics",
+    "math",
+    "special",
+    "elliptic",
+    "jacobi",
+    "sn",
+    "cn",
+    "dn",
+    "am",
+    "amplitude",
+    "number"
+  ],
   "funding": {
     "type": "opencollective",
     "url": "https://opencollective.com/stdlib"
