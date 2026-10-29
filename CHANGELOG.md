@@ -4,7 +4,7 @@
 
 <section class="release" id="unreleased">
 
-## Unreleased (2026-10-14)
+## Unreleased (2026-10-29)
 
 <section class="bug-fixes">
 
@@ -22,6 +22,7 @@
 
 <details>
 
+-   [`f3d9641`](https://github.com/stdlib-js/stdlib/commit/f3d96414757120d4577b1d406629573520f9073d) - **test:** migrate `math/base/special/ellipj` to ULP-based assertions [(#14788)](https://github.com/stdlib-js/stdlib/pull/14788) _(by Aryan kumar)_
 -   [`cb57c9e`](https://github.com/stdlib-js/stdlib/commit/cb57c9e4507ab2731542c3d53ab4dadeb9069a69) - **docs:** add examples and keywords [(#16152)](https://github.com/stdlib-js/stdlib/pull/16152) _(by Philipp Burckhardt)_
 -   [`8a518c5`](https://github.com/stdlib-js/stdlib/commit/8a518c59e356d57b718cb937dac92b8be1bd4e49) - **test:** migrate `math/base/special/ellipj` to ULP-based assertions [(#15264)](https://github.com/stdlib-js/stdlib/pull/15264) _(by Devansh Patel)_
 -   [`b953edd`](https://github.com/stdlib-js/stdlib/commit/b953edd95d0ca1b521d0abbd2c2719d099ff7807) - **refactor:** use `constants/float64/nan` and clean-up [(#13585)](https://github.com/stdlib-js/stdlib/pull/13585) _(by Philipp Burckhardt)_
@@ -38,8 +39,9 @@
 
 ### Contributors
 
-A total of 4 people contributed to this release. Thank you to the following contributors:
+A total of 5 people contributed to this release. Thank you to the following contributors:
 
+-   Aryan kumar
 -   Athan Reines
 -   Devansh Patel
 -   Karan Anand
